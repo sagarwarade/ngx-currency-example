@@ -93,16 +93,16 @@
                 </div>
                 <div class="col-md-8">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="inputModeRadio" id="financialInputMode" value="0" [(ngModel)]="customCurrencyOptions.inputMode">
+                    <input class="form-check-input" type="radio" name="inputModeRadio" id="financialInputMode" [value]="NgxCurrencyInputMode.Financial" [(ngModel)]="customCurrencyOptions.inputMode">
                     <label class="form-check-label" for="financialInputMode">
                       Financial
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="inputModeRadio" id="naturalInputMode" value="1" [(ngModel)]="customCurrencyOptions.inputMode">
+                    <input class="form-check-input" type="radio" name="inputModeRadio" id="naturalInputMode" [value]="NgxCurrencyInputMode.Natural" [(ngModel)]="customCurrencyOptions.inputMode">
                     <label class="form-check-label" for="naturalInputMode">
                       Natural
-                    </label>
+                    </label> 
                   </div>
                 </div>
               </div>
