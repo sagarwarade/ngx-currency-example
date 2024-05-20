@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { NgxCurrencyExampleComponent } from './ngx-currency-example/ngx-currency-example.component';
+import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
+import { NgxCurrencyModule } from "ngx-currency";
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NgxCurrencyExampleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgxCurrencyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
