@@ -1,80 +1,114 @@
 <div class="container mt-5">
     <div class="row">
-      <div class="col-md-6">
-        <div class="mb-3">
-          <label for="basicCurrencyInput" class="form-label">Basic Currency Input</label>
-          <input id="basicCurrencyInput" type="text" class="form-control" currencyMask [(ngModel)]="amount1"/>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="mb-3">
-          <label for="customCurrencyInput" class="form-label">Customized Currency Input</label>
-          <input id="customCurrencyInput" type="text" class="form-control" currencyMask [options]="customCurrencyOptions" [(ngModel)]="amount2"/>
-        </div>
-        <div class="mb-3">
-          <label for="alignInput" class="form-label">Align</label>
-          <select class="form-select" id="alignInput" [(ngModel)]="customCurrencyOptions.align">
-            <option value="left">Left</option>
-            <option value="right">Right</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="allowNegativeInput" class="form-label">Allow Negative</label>
-          <select class="form-select" id="allowNegativeInput" [(ngModel)]="customCurrencyOptions.allowNegative">
-            <option value="true">True</option>
-            <option value="false">False</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="allowZeroInput" class="form-label">Allow Zero</label>
-          <select class="form-select" id="allowZeroInput" [(ngModel)]="customCurrencyOptions.allowZero">
-            <option value="true">True</option>
-            <option value="false">False</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="decimalInput" class="form-label">Decimal Separator</label>
-          <input id="decimalInput" type="text" class="form-control" [(ngModel)]="customCurrencyOptions.decimal"/>
-        </div>
-        <div class="mb-3">
-          <label for="precisionInput" class="form-label">Precision</label>
-          <input id="precisionInput" type="number" class="form-control" [(ngModel)]="customCurrencyOptions.precision"/>
-        </div>
-        <div class="mb-3">
-          <label for="prefixInput" class="form-label">Prefix</label>
-          <input id="prefixInput" type="text" class="form-control" [(ngModel)]="customCurrencyOptions.prefix"/>
-        </div>
-        <div class="mb-3">
-          <label for="suffixInput" class="form-label">Suffix</label>
-          <input id="suffixInput" type="text" class="form-control" [(ngModel)]="customCurrencyOptions.suffix"/>
-        </div>
-        <div class="mb-3">
-          <label for="thousandsInput" class="form-label">Thousands Separator</label>
-          <input id="thousandsInput" type="text" class="form-control" [(ngModel)]="customCurrencyOptions.thousands"/>
-        </div>
-        <div class="mb-3">
-          <label for="nullableInput" class="form-label">Nullable</label>
-          <select class="form-select" id="nullableInput" [(ngModel)]="customCurrencyOptions.nullable">
-            <option value="true">True</option>
-            <option value="false">False</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="minInput" class="form-label">Min Value</label>
-          <input id="minInput" type="number" class="form-control" [(ngModel)]="customCurrencyOptions.min"/>
-        </div>
-        <div class="mb-3">
-          <label for="maxInput" class="form-label">Max Value</label>
-          <input id="maxInput" type="number" class="form-control" [(ngModel)]="customCurrencyOptions.max"/>
-        </div>
-        <div class="mb-3">
-          <label for="inputModeInput" class="form-label">Input Mode</label>
-          <select class="form-select" id="inputModeInput" [(ngModel)]="customCurrencyOptions.inputMode">
-            <option value="0">Financial</option>
-            <option value="1">Natural</option>
-          </select>
-        </div>
-      </div>
+        <div class="col-md-6 mb-4">
+            <div class="output-field">
+              <h2 class="text-center mb-4">Output</h2>
+              <div class="output-result">
+                <label for="customCurrencyInput" class="form-label">Currency Input</label>
+                <input id="customCurrencyInput" type="text" class="form-control" currencyMask [options]="customCurrencyOptions" [(ngModel)]="amount2"/>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-6">
+            <div class="customization-options">
+              <h2 class="text-center mb-4">Customization Options</h2>
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <label for="alignInput" class="form-label">Align</label>
+                </div>
+                <div class="col-md-8">
+                  <select class="form-select" id="alignInput" [(ngModel)]="customCurrencyOptions.align">
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <label for="decimalInput" class="form-label">Decimal Separator</label>
+                </div>
+                <div class="col-md-8">
+                  <input id="decimalInput" type="text" class="form-control form-control-sm" [(ngModel)]="customCurrencyOptions.decimal"/>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <label for="precisionInput" class="form-label">Precision</label>
+                </div>
+                <div class="col-md-8">
+                  <input id="precisionInput" type="number" class="form-control form-control-sm" [(ngModel)]="customCurrencyOptions.precision"/>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <label for="prefixInput" class="form-label">Prefix</label>
+                </div>
+                <div class="col-md-8">
+                  <input id="prefixInput" type="text" class="form-control form-control-sm" [(ngModel)]="customCurrencyOptions.prefix"/>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <label for="suffixInput" class="form-label">Suffix</label>
+                </div>
+                <div class="col-md-8">
+                  <input id="suffixInput" type="text" class="form-control form-control-sm" [(ngModel)]="customCurrencyOptions.suffix"/>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <label for="thousandsInput" class="form-label">Thousands Separator</label>
+                </div>
+                <div class="col-md-8">
+                  <input id="thousandsInput" type="text" class="form-control form-control-sm" [(ngModel)]="customCurrencyOptions.thousands"/>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <label for="nullableInput" class="form-label">Nullable</label>
+                </div>
+                <div class="col-md-8">
+                  <input id="nullableInput" type="checkbox" class="form-check-input" [(ngModel)]="customCurrencyOptions.nullable"/>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <label for="minInput" class="form-label">Min Value</label>
+                </div>
+                <div class="col-md-8">
+                  <input id="minInput" type="number" class="form-control form-control-sm" [(ngModel)]="customCurrencyOptions.min"/>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <label for="maxInput" class="form-label">Max Value</label>
+                </div>
+                <div class="col-md-8">
+                  <input id="maxInput" type="number" class="form-control form-control-sm" [(ngModel)]="customCurrencyOptions.max"/>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <label class="form-label">Input Mode</label>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="inputModeRadio" id="financialInputMode" value="0" [(ngModel)]="customCurrencyOptions.inputMode">
+                    <label class="form-check-label" for="financialInputMode">
+                      Financial
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="inputModeRadio" id="naturalInputMode" value="1" [(ngModel)]="customCurrencyOptions.inputMode">
+                    <label class="form-check-label" for="naturalInputMode">
+                      Natural
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+     
     </div>
   </div>
   
