@@ -11,10 +11,6 @@
           <label for="customCurrencyInput" class="form-label">Customized Currency Input</label>
           <input id="customCurrencyInput" type="text" class="form-control" currencyMask [options]="customCurrencyOptions" [(ngModel)]="amount2"/>
         </div>
-        <div class="form-check mb-3">
-          <input class="form-check-input" type="checkbox" id="prefixSuffixCheckbox" [(ngModel)]="showPrefixSuffix">
-          <label class="form-check-label" for="prefixSuffixCheckbox">Include Prefix/Suffix</label>
-        </div>
         <div class="mb-3">
           <label for="alignInput" class="form-label">Align</label>
           <select class="form-select" id="alignInput" [(ngModel)]="customCurrencyOptions.align">
