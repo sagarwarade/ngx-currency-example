@@ -1,1 +1,84 @@
-<p>ngx-currency-example works!</p>
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="basicCurrencyInput" class="form-label">Basic Currency Input</label>
+          <input id="basicCurrencyInput" type="text" class="form-control" currencyMask [(ngModel)]="amount1"/>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="customCurrencyInput" class="form-label">Customized Currency Input</label>
+          <input id="customCurrencyInput" type="text" class="form-control" currencyMask [options]="customCurrencyOptions" [(ngModel)]="amount2"/>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="prefixSuffixCheckbox" [(ngModel)]="showPrefixSuffix">
+          <label class="form-check-label" for="prefixSuffixCheckbox">Include Prefix/Suffix</label>
+        </div>
+        <div class="mb-3">
+          <label for="alignInput" class="form-label">Align</label>
+          <select class="form-select" id="alignInput" [(ngModel)]="customCurrencyOptions.align">
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="allowNegativeInput" class="form-label">Allow Negative</label>
+          <select class="form-select" id="allowNegativeInput" [(ngModel)]="customCurrencyOptions.allowNegative">
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="allowZeroInput" class="form-label">Allow Zero</label>
+          <select class="form-select" id="allowZeroInput" [(ngModel)]="customCurrencyOptions.allowZero">
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="decimalInput" class="form-label">Decimal Separator</label>
+          <input id="decimalInput" type="text" class="form-control" [(ngModel)]="customCurrencyOptions.decimal"/>
+        </div>
+        <div class="mb-3">
+          <label for="precisionInput" class="form-label">Precision</label>
+          <input id="precisionInput" type="number" class="form-control" [(ngModel)]="customCurrencyOptions.precision"/>
+        </div>
+        <div class="mb-3">
+          <label for="prefixInput" class="form-label">Prefix</label>
+          <input id="prefixInput" type="text" class="form-control" [(ngModel)]="customCurrencyOptions.prefix"/>
+        </div>
+        <div class="mb-3">
+          <label for="suffixInput" class="form-label">Suffix</label>
+          <input id="suffixInput" type="text" class="form-control" [(ngModel)]="customCurrencyOptions.suffix"/>
+        </div>
+        <div class="mb-3">
+          <label for="thousandsInput" class="form-label">Thousands Separator</label>
+          <input id="thousandsInput" type="text" class="form-control" [(ngModel)]="customCurrencyOptions.thousands"/>
+        </div>
+        <div class="mb-3">
+          <label for="nullableInput" class="form-label">Nullable</label>
+          <select class="form-select" id="nullableInput" [(ngModel)]="customCurrencyOptions.nullable">
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="minInput" class="form-label">Min Value</label>
+          <input id="minInput" type="number" class="form-control" [(ngModel)]="customCurrencyOptions.min"/>
+        </div>
+        <div class="mb-3">
+          <label for="maxInput" class="form-label">Max Value</label>
+          <input id="maxInput" type="number" class="form-control" [(ngModel)]="customCurrencyOptions.max"/>
+        </div>
+        <div class="mb-3">
+          <label for="inputModeInput" class="form-label">Input Mode</label>
+          <select class="form-select" id="inputModeInput" [(ngModel)]="customCurrencyOptions.inputMode">
+            <option value="0">Financial</option>
+            <option value="1">Natural</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  

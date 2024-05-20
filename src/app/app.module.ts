@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxCurrencyExampleComponent } from './ngx-currency-example/ngx-currency-example.component';
 import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
-import { NgxCurrencyModule } from "ngx-currency";
+import { NgxCurrencyDirective } from "ngx-currency";
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +15,7 @@ import { NgxCurrencyModule } from "ngx-currency";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgxCurrencyModule
+    NgxCurrencyDirective
   ],
   providers: [],
   bootstrap: [AppComponent]

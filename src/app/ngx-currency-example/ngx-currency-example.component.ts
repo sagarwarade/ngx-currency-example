@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxCurrencyConfig, NgxCurrencyInputMode } from 'ngx-currency';
 
 @Component({
   selector: 'app-ngx-currency-example',
@@ -6,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrl: './ngx-currency-example.component.scss'
 })
 export class NgxCurrencyExampleComponent {
-
+  amount1: any;
+  amount2: any;
+  showPrefixSuffix: boolean = true;
+  customCurrencyOptions: NgxCurrencyConfig = {
+    align: "right",
+    allowNegative: false,
+    allowZero: false,
+    decimal: ".",
+    precision: 2,
+    prefix: "$",
+    suffix: "",
+    thousands: ",",
+    nullable: false,
+    min: null,
+    max: null,
+    inputMode: NgxCurrencyInputMode.Natural
+  };
 }
