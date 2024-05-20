@@ -18,7 +18,7 @@ export class NgxCurrencyExampleComponent {
     decimal: ".",
     precision: 2,
     prefix: "₹",
-    suffix: "r",
+    suffix: "",
     thousands: ",",
     nullable: false,
     min: null,

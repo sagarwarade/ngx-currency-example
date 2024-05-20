@@ -1,9 +1,28 @@
 <div class="container mt-5">
-    <div class="row">
+    <div class="row align-items-center">
+
+      <div class="col-md-12 mb-4">
+        <div class="output-field">
+          <div class="row">
+            <div class="col-md-6 align-content-center">
+              <h2 class="text-center">With Global Configuration</h2>
+            </div>
+            <div class="col-md-6">
+              <div class="">
+                <label for="customCurrencyInput" class="form-label">Currency Input</label>
+                <input id="customCurrencyInput" type="text" class="form-control" currencyMask [(ngModel)]="amount1"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
         <div class="col-md-6 mb-4">
             <div class="output-field">
-              <h2 class="text-center mb-4">Output</h2>
-              <div class="output-result">
+              <h2 class="text-center">With Custom Configuration</h2>
+              <div class="">
                 <label for="customCurrencyInput" class="form-label">Currency Input</label>
                 <input id="customCurrencyInput" type="text" class="form-control" currencyMask [options]="customCurrencyOptions" [(ngModel)]="amount2"/>
               </div>
